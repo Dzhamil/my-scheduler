@@ -1,0 +1,15 @@
+.task {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    background-color: azure;
+    padding: 5px;
+    margin: 5px;
+}
+
+.description {
+    padding-inline: 10px;
+}
+
+.deleteButton {
+    padding-inline: 10px;
+}

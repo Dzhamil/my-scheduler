@@ -1,0 +1,32 @@
+.inputTaskArea {
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 0.3fr 1fr 1fr;
+    background-color: beige;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.inputTaskArea .input {
+    margin: 5px;
+}
+
+.inputTaskArea .input textarea {
+    resize: initial;
+    height: 50px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.inputTaskArea span {
+    margin: 5px;
+}
+
+.inputTaskArea .addButton {
+    margin: 5px;
+}
+
+.inputTaskArea .addButton button {
+    height: 25px;
+    width: 100%;
+}
