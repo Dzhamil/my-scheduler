@@ -1,0 +1,22 @@
+.bottomPanel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item button {
+    width: 100%;
+    background-color: black;
+    color: grey;
+}
+
+.item button:focus {
+    outline: none;
+}
+
+.delete:hover {
+    color: red;
+}
+
+.complete:hover {
+    color: green;
+}

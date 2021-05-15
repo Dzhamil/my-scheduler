@@ -4,11 +4,13 @@ const Navbar = () => {
     return (
         <div className={s.navbar}>
             <div>
-                <a>Tasks three</a>
+                <a>Задачи</a>
             </div>
-
             <div>
-                <a>Statistic</a>
+                <a>Финансы</a>
+            </div>
+            <div>
+                <a>Статистика</a>
             </div>
         </div>
     );

@@ -1,0 +1,15 @@
+.task {
+    display: grid;
+    grid-template-areas:
+        "cornerPanel topPanel cornerPanel"
+        "leftPanel infoPanel rightPanel"
+        "cornerPanel bottomPanel cornerPanel";
+    grid-template-rows: 2fr 10fr 1fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    padding: 5px;
+    margin: 5px;
+    width: 250px;
+    height: 250px;
+}
+
+

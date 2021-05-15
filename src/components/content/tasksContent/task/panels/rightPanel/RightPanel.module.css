@@ -1,0 +1,22 @@
+.rightPanel {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.item button {
+    height: 100%;
+    background-color: black;
+    color: grey;
+}
+
+.item button:focus {
+    outline: none;
+}
+
+.new:hover {
+    color: white;
+}
+
+.close:hover {
+    color: yellow;
+}
