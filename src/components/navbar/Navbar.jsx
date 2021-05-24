@@ -4,13 +4,13 @@ const Navbar = () => {
     return (
         <div className={s.navbar}>
             <div>
-                <a>Задачи</a>
+                <a href='/tasks'>Задачи</a>
             </div>
             <div>
-                <a>Финансы</a>
+                <a href='/finance'>Финансы</a>
             </div>
             <div>
-                <a>Статистика</a>
+                <a href='/statistic'>Статистика</a>
             </div>
         </div>
     );

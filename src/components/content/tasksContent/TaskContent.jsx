@@ -4,7 +4,7 @@ import s from './TaskContent.module.css'
 
 const TaskContent = () => {
     return (
-        <div className={s.appContent}>
+        <div className={s.taskContent}>
             <Task category='Машина' description='Почистить салон' percent='50'/>
             <Task category='Дом' description='Сложить вещи' percent='100'/>
             <Task category='Учеба' description='Пройти курс реакта' percent='33'/>
