@@ -1,8 +1,8 @@
-import s from './TopPanel.module.css'
+import s from './PercentPanel.module.css'
 
-const TopPanel = (props) => {
+const PercentPanel = (props) => {
     return (
-        <div className={s.topPanel}>
+        <div className={s.percentPanel}>
             <div className={s.status}>
                     <span>
                         {props.percent} %
@@ -16,4 +16,4 @@ const TopPanel = (props) => {
     );
 }
 
-export default TopPanel;
+export default PercentPanel;

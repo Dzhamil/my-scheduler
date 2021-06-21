@@ -1,8 +1,16 @@
 import s from "./Header.module.css"
-const Header = () => {
+import PercentPanel from "../other/percentPanel/PercentPanel";
+const Header = (props) => {
     return (
         <div className={s.header}>
-            this is header
+            <div>
+                <span>
+                    Статус выполненных задач:
+                </span>
+            </div>
+            <div>
+                <PercentPanel percent={props.percent}/>
+            </div>
         </div>
     );
 }

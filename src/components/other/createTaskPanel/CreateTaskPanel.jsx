@@ -1,6 +1,6 @@
-import s from './InputTaskArea.module.css'
+import s from './CreateTaskPanel.module.css'
 
-const InputTaskArea = () => {
+const CreateTaskPanel = () => {
     return (
         <div className={s.inputTaskArea}>
             <span>
@@ -22,4 +22,4 @@ const InputTaskArea = () => {
     );
 }
 
-export default InputTaskArea;
+export default CreateTaskPanel;
