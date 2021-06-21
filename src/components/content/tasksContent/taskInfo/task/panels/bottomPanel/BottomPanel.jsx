@@ -1,15 +1,23 @@
 import s from './BottomPanel.module.css'
 
 const BottomPanel = () => {
+    let completeTask = () => {
+        alert("Завершить задачу");
+    };
+
+    let deleteTask = () => {
+        alert("Удалить задачу");
+    };
+
     return (
         <div className={s.bottomPanel}>
             <div className={s.item}>
-                <button className={s.complete}>
+                <button onClick={completeTask} className={s.complete}>
                    complete
                 </button>
             </div>
             <div className={s.item}>
-                <button className={s.delete}>
+                <button onClick={deleteTask} className={s.delete}>
                    delete
                 </button>
             </div>
