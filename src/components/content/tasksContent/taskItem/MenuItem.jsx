@@ -2,15 +2,24 @@ import s from './MenuItem.module.css'
 import {NavLink} from "react-router-dom";
 
 const MenuItem = (props) => {
-    let classOfMenuItem;
-    props.color === 'red'
-        ? classOfMenuItem = s.taskItem + " " + s.redRef
-        : classOfMenuItem = s.taskItem + " " + s.whiteRef;
+    let menuItemType;
+    let clickLink;
+
+    if(props.menuItemType === 'newTask') {
+        menuItemType = s.taskItem + " " + s.redRef;
+        clickLink = () => {
+            props.setActive(true)
+        }
+    } else {
+        menuItemType = s.taskItem + " " + s.whiteRef
+    };
 
     return (
-        <div className={classOfMenuItem}>
+        <div className={menuItemType}>
             <span>
-                <NavLink to={props.to} activeClassName={s.active}>{props.category}</NavLink>
+                <NavLink onClick={clickLink} to={props.to} activeClassName={s.active}>
+                    {props.category}
+                </NavLink>
             </span>
         </div>
     );

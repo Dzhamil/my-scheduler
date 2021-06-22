@@ -3,6 +3,8 @@ import CreateTaskPanel from "../../other/createTaskPanel/CreateTaskPanel";
 import s from './TaskContent.module.css'
 import {Route} from "react-router-dom";
 import MenuItem from "./taskItem/MenuItem";
+import {useState} from "react";
+import Modal from "../../other/modal/Modal";
 
 const TaskContent = (props) => {
     let tasks = props.taskData.tasks
@@ -12,6 +14,8 @@ const TaskContent = (props) => {
                             render={() => <Task category={item.category} description={item.description}
                                                 percent={item.percent}/>}/>);
 
+    const [modalActive, setModalActive] = useState(true);
+
     return (
         <div className={s.taskContent}>
             <div className={s.menuItems}>
@@ -20,13 +24,20 @@ const TaskContent = (props) => {
                 </div>
                 <div className={s.createTask}>
                     <MenuItem to={props.taskData.createTaskPanelData.to}
+                              setModalActive={setModalActive}
                               category={props.taskData.createTaskPanelData.description}
-                              color={'red'}/>
+                              menuItemType={'newTask'}
+                              setActive={setModalActive}
+                    />
                 </div>
             </div>
             <div className={s.taskInfo}>
                 {taskInfos}
-                <Route exact path={props.taskData.createTaskPanelData.to} render={() => <CreateTaskPanel/>}/>
+                <Modal active={modalActive} setActive={setModalActive}>
+                    <CreateTaskPanel/>
+                    {/*blblbl*/}
+                </Modal>
+                {/*<Route exact path={props.taskData.createTaskPanelData.to} render={() => <CreateTaskPanel/>}/>*/}
             </div>
         </div>
     );
